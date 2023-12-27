@@ -4,7 +4,6 @@ include_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/DaRF/__libraries__/__include__/
 
 global $__site_config;
 $__site_config = file_get_contents('/var/www/DBconfig.json');
-Session::start();
 
 function get_config($key){
   global $__site_config;
