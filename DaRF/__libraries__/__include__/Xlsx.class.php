@@ -12,6 +12,7 @@ class Xlsx{
         print_r($output);
         return $output;
     }
+    
     /*GetField is used to get Perticulat Distinct field 
     [Warning] this function is not sutable of getting model or perticular brand, it return all distinct brand
     for getting perticular model of a brand use getModel()

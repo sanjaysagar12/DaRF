@@ -1,3 +1,5 @@
+
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
@@ -33,3 +35,37 @@
   button:hover, a:hover {
     opacity: 0.7;
   }
+
+
+  
+
+
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+
+span {
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+}
