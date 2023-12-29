@@ -1,3 +1,6 @@
+
+
+import gspread as gs
 import pandas as pd
 import argparse
 import json
@@ -40,7 +43,15 @@ def getJson(dataframe):
 
 
 args = Argument()
-dataframe = pd.read_excel('/var/www/CarData.xlsx')
+gc = gs.service_account(filename='/var/www/cardata-409603-1d6cbceeac46.json')
+sheet = gc.open_by_url('https://docs.google.com/spreadsheets/d/14LJWfSGS9rRST5pvAf5Lpz3w6qoGLcYK5tgPftdcC80/edit?pli=1#gid=1363470746')
+
+ws = sheet.worksheet('Sheet1')
+dataframe = pd.DataFrame(ws.get_all_records())
+
+dataframe.head()
+
+#dataframe = pd.read_excel('/var/www/CarData.xlsx')
 
 #to Fetch all Data From Xl
 """"
